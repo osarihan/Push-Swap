@@ -6,7 +6,7 @@
 /*   By: osarihan <osarihan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 16:12:33 by osarihan          #+#    #+#             */
-/*   Updated: 2022/06/29 14:14:44 by osarihan         ###   ########.fr       */
+/*   Updated: 2022/06/29 14:54:06 by osarihan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ int		is_number(char **argv, int argc);
 int		ft_strlen(char *argv);
 int		is_uniqe(t_stack *stack);
 int		is_sorted(t_stack *stack);
-
 //convert functions
 t_stack	*to_int(char **argv, int argc);
 int		ft_atoi(const char *argv);
