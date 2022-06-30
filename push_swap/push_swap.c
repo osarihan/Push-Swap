@@ -6,7 +6,7 @@
 /*   By: osarihan <osarihan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 16:11:29 by osarihan          #+#    #+#             */
-/*   Updated: 2022/06/29 13:50:25 by osarihan         ###   ########.fr       */
+/*   Updated: 2022/06/30 16:46:38 by osarihan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,22 @@ t_stack	*push_swap(char **argv, int argc)
 	stack_a = to_int(argv, argc);
 	len = ft_lstsize(stack_a);
 	index_push(stack_a);
-	if (len <= 3)
-		three_swap(&stack_a, 0, 0, 0);
-	else if (len <= 5)
-		five_swap(&stack_a, &stack_b, len, 0);
+	if (is_uniqe(stack_a) == 1)
+	{
+		if (len <= 3)
+			three_swap(&stack_a, 0, 0, 0);
+		else if (len <= 5)
+			five_swap(&stack_a, &stack_b, len, 0);
+		else
+			radix_swap(&stack_a, &stack_b, len, 0);
+	}
 	else
-		radix_swap(&stack_a, &stack_b, len, 0);
+	{
+		write(2, "Error\n", 6);
+		free(stack_a);
+		exit(EXIT_FAILURE);
+	}
+	free(stack_b);
 	return (stack_a);
 }
 

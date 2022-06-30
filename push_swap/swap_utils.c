@@ -6,7 +6,7 @@
 /*   By: osarihan <osarihan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 13:52:46 by osarihan          #+#    #+#             */
-/*   Updated: 2022/06/29 17:17:26 by osarihan         ###   ########.fr       */
+/*   Updated: 2022/06/30 16:46:00 by osarihan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	two_swap(t_stack **stack, int b)
 {
 	if (ft_lstsize(*stack) == 1)
-		exit(0);
+		exit (0);
 	if (b == 0)
 	{
 		if (ft_lstdata(*stack, 0) > ft_lstdata(*stack, 1))
@@ -36,7 +36,7 @@ void	three_swap(a_stack **stack, int i, int data1, int data2)
 {
 	int	data3;
 
-	if (ft_lstsize(*stack) <= 2)
+	if (ft_lstsize(*stack) == 2)
 		two_swap(stack, 0);
 	else
 	{
@@ -123,7 +123,6 @@ void	radix_swap(a_stack **stack_a, b_stack **stack_b, int len, int i)
 	int	j;
 
 	j = 0;
-	i = 0;
 	while (is_sorted(*stack_a) == 0)
 	{
 		j = 0;

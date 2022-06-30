@@ -6,7 +6,7 @@
 /*   By: osarihan <osarihan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 14:00:32 by osarihan          #+#    #+#             */
-/*   Updated: 2022/06/29 14:01:23 by osarihan         ###   ########.fr       */
+/*   Updated: 2022/06/30 16:44:05 by osarihan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,23 +52,29 @@ int	ft_strlen(char *argv)
 
 int	is_uniqe(t_stack *stack)
 {
-	int		data;
-	t_stack	*swap;
+	int	i;
+	int	j;
+	int	data1;
+	int	data2;
 
-	swap = stack;
-	data = swap->content;
-	while (stack && stack->next != NULL)
+	i = 0;
+	j = 0;
+	while (i < ft_lstsize(stack))
 	{
-		if (stack->next != NULL && data == stack->next->content)
-			return (0);
-		else if (stack->next == NULL)
+		data1 = ft_lstdata(stack, i);
+		while (j < ft_lstsize(stack))
 		{
-			swap = swap->next;
-			data = swap->content;
-			stack = swap;
+			if (j + 1 == ft_lstsize(stack) && i == j)
+				return (1);
+			if (i == j)
+				j++;
+			data2 = ft_lstdata(stack, j);
+			if (data1 == data2)
+				return (0);
+			j++;
 		}
-		else
-			stack = stack->next;
+		j = 0;
+		i++;
 	}
 	return (1);
 }
@@ -78,6 +84,18 @@ int	is_sorted(t_stack *stack)
 	while (stack->next != NULL)
 	{
 		if (stack->content < stack->next->content)
+			stack = stack->next;
+		else
+			return (0);
+	}
+	return (1);
+}
+
+int	big_is_sorted(t_stack *stack)
+{
+	while (stack->next != NULL)
+	{
+		if (stack->content > stack->next->content)
 			stack = stack->next;
 		else
 			return (0);
