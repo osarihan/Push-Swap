@@ -6,7 +6,7 @@
 /*   By: osarihan <osarihan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 14:11:28 by osarihan          #+#    #+#             */
-/*   Updated: 2022/06/30 19:46:39 by osarihan         ###   ########.fr       */
+/*   Updated: 2022/06/30 19:58:28 by osarihan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,14 @@ int	min_index(t_stack *stack, int i)
 
 void	ss(a_stack **a, b_stack **b)
 {
-	sa(*a);
-	sb(*b);
+	sa(a);
+	sb(b);
 	write(1, "ss\n", 3);
 }
 
 void	rrr(a_stack **a, b_stack **b)
 {
-	rra(*a);
-	rrb(*b);
+	rra(a);
+	rrb(b);
 	write(1, "rrr\n", 4);
 }
