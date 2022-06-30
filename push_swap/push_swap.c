@@ -6,7 +6,7 @@
 /*   By: osarihan <osarihan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 16:11:29 by osarihan          #+#    #+#             */
-/*   Updated: 2022/06/30 16:46:38 by osarihan         ###   ########.fr       */
+/*   Updated: 2022/06/30 20:23:34 by osarihan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,11 @@ t_stack	*push_swap(char **argv, int argc)
 int	main(int argc, char **argv)
 {
 	t_stack	*stack;
-	int		len;
 
 	stack = (t_stack *)malloc(sizeof(t_stack));
 	if (!stack)
 	{
-		write (2, "Error\n", 6);
+		write(2, "Error\n", 6);
 		exit (EXIT_FAILURE);
 	}
 	if (argc > 1)
@@ -75,7 +74,6 @@ int	main(int argc, char **argv)
 		if (is_number(argv, argc))
 		{
 			stack = push_swap(argv, argc);
-			len = ft_lstsize(stack);
 		}
 		else
 		{
@@ -83,6 +81,8 @@ int	main(int argc, char **argv)
 			free(stack);
 			exit(EXIT_FAILURE);
 		}
+		free(stack);
+		exit(EXIT_FAILURE);
 	}
 	return (0);
 }

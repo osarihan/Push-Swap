@@ -6,7 +6,7 @@
 /*   By: osarihan <osarihan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 13:52:46 by osarihan          #+#    #+#             */
-/*   Updated: 2022/06/30 16:46:00 by osarihan         ###   ########.fr       */
+/*   Updated: 2022/06/30 20:28:26 by osarihan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	three_swap(a_stack **stack, int i, int data1, int data2)
 {
 	int	data3;
 
-	if (ft_lstsize(*stack) == 2)
+	if (ft_lstsize(*stack) <= 2)
 		two_swap(stack, 0);
 	else
 	{
