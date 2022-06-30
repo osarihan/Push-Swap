@@ -6,7 +6,7 @@
 /*   By: osarihan <osarihan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 16:12:33 by osarihan          #+#    #+#             */
-/*   Updated: 2022/06/30 16:46:21 by osarihan         ###   ########.fr       */
+/*   Updated: 2022/06/30 19:47:08 by osarihan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,8 @@ void	rra(a_stack **a);
 void	rrb(b_stack **b);
 void	pb(a_stack **a, b_stack **b);
 void	pa(a_stack **a, b_stack **b);
+void	ss(a_stack **a, b_stack **b);
+void	rrr(a_stack **a, b_stack **b);
 //index funcitons
 int		min_index(t_stack *stack, int i);
 void	index_push(t_stack *stack);
