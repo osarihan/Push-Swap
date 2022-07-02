@@ -6,7 +6,7 @@
 /*   By: osarihan <osarihan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 14:00:32 by osarihan          #+#    #+#             */
-/*   Updated: 2022/06/30 16:44:05 by osarihan         ###   ########.fr       */
+/*   Updated: 2022/07/02 14:10:02 by osarihan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	ft_strlen(char *argv)
 	return (i);
 }
 
-int	is_uniqe(t_stack *stack)
+int	is_unique(t_stack *stack)
 {
 	int	i;
 	int	j;

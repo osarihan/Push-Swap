@@ -6,7 +6,7 @@
 /*   By: osarihan <osarihan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 16:12:33 by osarihan          #+#    #+#             */
-/*   Updated: 2022/06/30 19:47:08 by osarihan         ###   ########.fr       */
+/*   Updated: 2022/07/02 14:10:08 by osarihan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	index_push(t_stack *stack);
 //control funtions
 int		is_number(char **argv, int argc);
 int		ft_strlen(char *argv);
-int		is_uniqe(t_stack *stack);
+int		is_unique(t_stack *stack);
 int		is_sorted(t_stack *stack);
 int		big_is_sorted(t_stack *stack);
 //convert functions
