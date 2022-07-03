@@ -6,7 +6,7 @@
 /*   By: osarihan <osarihan@student.42kocaeli.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 14:03:58 by osarihan          #+#    #+#             */
-/*   Updated: 2022/07/02 13:00:34 by osarihan         ###   ########.fr       */
+/*   Updated: 2022/07/03 13:55:40 by osarihan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_stack	*to_int(char **argv, int argc)
 					j--;
 			}
 			while ((argv[argc][j] >= '0' && argv[argc][j] <= '9')
-				|| argv[argc][j] == '-')
+				|| argv[argc][j] == '-' || argv[argc][j] == '+')
 				j--;
 			push(&stack, ft_atoi(&argv[argc][j + 1]));
 			while (argv[argc][j] == ' ')
